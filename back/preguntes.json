@@ -1,0 +1,244 @@
+{
+  "preguntes": [
+    {
+      "id": 1,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Nike",
+        "Adidas",
+        "Under Armour",
+        "New Balance"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/nike"
+    },
+    {
+      "id": 2,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Adidas",
+        "Puma",
+        "Nike",
+        "Reebok"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/adidas"
+    },
+    {
+      "id": 3,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Apple",
+        "Samsung",
+        "Microsoft",
+        "Google"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/apple"
+    },
+    {
+      "id": 4,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Coca-Cola",
+        "Pepsi",
+        "Fanta",
+        "Sprite"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/cocacola"
+    },
+    {
+      "id": 5,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "McDonald's",
+        "Burger King",
+        "KFC",
+        "Subway"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/mcdonalds"
+    },
+    {
+      "id": 6,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "BMW",
+        "Audi",
+        "Mercedes-Benz",
+        "Toyota"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/bmw"
+    },
+    {
+      "id": 7,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Spotify",
+        "YouTube",
+        "TikTok",
+        "Instagram"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/spotify"
+    },
+    {
+      "id": 8,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Samsung",
+        "Huawei",
+        "Xiaomi",
+        "Sony"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/samsung"
+    },
+    {
+      "id": 9,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Under Armour",
+        "Nike",
+        "Adidas",
+        "New Balance"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/underarmour"
+    },
+    {
+      "id": 10,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "New Balance",
+        "Nike",
+        "Puma",
+        "Adidas"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/newbalance"
+    },
+    {
+      "id": 11,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Puma",
+        "Nike",
+        "Adidas",
+        "Reebok"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/puma"
+    },
+    {
+      "id": 12,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Reebok",
+        "Nike",
+        "Puma",
+        "Adidas"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/reebok"
+    },
+    {
+      "id": 13,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Google",
+        "Apple",
+        "Microsoft",
+        "Amazon"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/google"
+    },
+    {
+      "id": 14,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Microsoft",
+        "Google",
+        "Apple",
+        "Amazon"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/microsoft"
+    },
+    {
+      "id": 15,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "YouTube",
+        "TikTok",
+        "Instagram",
+        "Spotify"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/youtube"
+    },
+    {
+      "id": 16,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Instagram",
+        "Facebook",
+        "TikTok",
+        "YouTube"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/instagram"
+    },
+    {
+      "id": 17,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "TikTok",
+        "Instagram",
+        "YouTube",
+        "Spotify"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/tiktok"
+    },
+    {
+      "id": 18,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Amazon",
+        "Google",
+        "Microsoft",
+        "Apple"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/amazon"
+    },
+    {
+      "id": 19,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Toyota",
+        "BMW",
+        "Audi",
+        "Mercedes-Benz"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/toyota"
+    },
+    {
+      "id": 20,
+      "pregunta": "Quina marca és aquest logotip?",
+      "respostes": [
+        "Audi",
+        "BMW",
+        "Toyota",
+        "Mercedes-Benz"
+      ],
+      "correctAnswer": 0,
+      "imatge": "https://cdn.simpleicons.org/audi"
+    }
+  ]
+}

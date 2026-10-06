@@ -1,0 +1,125 @@
+{
+ "preguntes": [
+   {
+     "id": 1,
+     "pregunta": "Quina marca és aquest logotip?",
+     "respostes": [
+       "Nike",
+       "Adidas",
+       "Puma",
+       "Reebok"
+     ],
+     "resposta_correcta": 0,
+     "imatge": "imatges/nike.jpg"
+   },
+   {
+     "id": 2,
+     "pregunta": "Quina marca és aquest logotip?",
+     "respostes": [
+       "Nike",
+       "Adidas",
+       "Puma",
+       "Reebok"
+     ],
+     "resposta_correcta": 1,
+     "imatge": "imatges/adidas.jpg"
+   },
+   {
+     "id": 3,
+     "pregunta": "Quina marca és aquest logotip?",
+     "respostes": [
+       "Pepsi",
+       "Coca-Cola",
+       "Fanta",
+       "Sprite"
+     ],
+     "resposta_correcta": 1,
+     "imatge": "imatges/coca-cola.jpg"
+   },
+   {
+     "id": 4,
+     "pregunta": "Quina marca és aquest logotip?",
+     "respostes": [
+       "Microsoft",
+       "Google",
+       "Apple",
+       "Samsung"
+     ],
+     "resposta_correcta": 2,
+     "imatge": "imatges/apple.jpg"
+   },
+   {
+     "id": 5,
+     "pregunta": "Quina marca és aquest logotip?",
+     "respostes": [
+       "Huawei",
+       "Samsung",
+       "Sony",
+       "LG"
+     ],
+     "resposta_correcta": 1,
+     "imatge": "imatges/samsung.jpg"
+   },
+   {
+     "id": 6,
+     "pregunta": "Quina marca és aquest logotip?",
+     "respostes": [
+       "McDonald's",
+       "Burger King",
+       "KFC",
+       "Subway"
+     ],
+     "resposta_correcta": 0,
+     "imatge": "imatges/mcdonalds.jpg"
+   },
+   {
+     "id": 7,
+     "pregunta": "Quina marca és aquest logotip?",
+     "respostes": [
+       "Coca-Cola",
+       "Fanta",
+       "Pepsi",
+       "Sprite"
+     ],
+     "resposta_correcta": 2,
+     "imatge": "imatges/pepsi.jpg"
+   },
+   {
+     "id": 8,
+     "pregunta": "Quina marca és aquest logotip?",
+     "respostes": [
+       "BMW",
+       "Audi",
+       "Mercedes-Benz",
+       "Volvo"
+     ],
+     "resposta_correcta": 0,
+     "imatge": "imatges/bmw.jpg"
+   },
+   {
+     "id": 9,
+     "pregunta": "Quina marca és aquest logotip?",
+     "respostes": [
+       "BMW",
+       "Audi",
+       "Mercedes-Benz",
+       "Volvo"
+     ],
+     "resposta_correcta": 2,
+     "imatge": "imatges/mercedes.jpg"
+   },
+   {
+     "id": 10,
+     "pregunta": "Quina marca és aquest logotip?",
+     "respostes": [
+       "Instagram",
+       "Spotify",
+       "TikTok",
+       "YouTube"
+     ],
+     "resposta_correcta": 1,
+     "imatge": "imatges/spotify.jpg"
+   }
+ ]
+}
+
