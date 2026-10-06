@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administració de preguntes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="admin.js" defer></script>
+</head>
+
+<body class="bg-light">
+    <div class="container py-4">
+
+        <header class="mb-4">
+            <h1 class="h3">Administració de preguntes</h1>
+        </header>
+
+        <main>
+            <p id="missatge" class="fw-semibold"></p>
+
+            <section class="card mb-4">
+                <div class="card-body">
+                    <h2 id="titolFormulari" class="h5 mb-3">Nova pregunta</h2>
+
+                    <form id="formPregunta">
+                        <input type="hidden" id="inputId">
+                        <input type="hidden" id="imatgeActual">
+
+                        <div class="mb-3">
+                            <label for="inputPregunta" class="form-label">Pregunta</label>
+                            <input type="text" id="inputPregunta" class="form-control" required>
+                        </div>
+
+                        <fieldset class="mb-3">
+                            <legend class="h6">Respostes (marca la correcta)</legend>
+
+                            <div class="input-group mb-2">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="radio" name="correcta" value="0" id="correcta0" checked aria-label="Resposta 1 correcta">
+                                </div>
+                                <input type="text" id="resposta0" class="form-control" placeholder="Resposta 1" required>
+                            </div>
+                            <div class="input-group mb-2">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="radio" name="correcta" value="1" id="correcta1" aria-label="Resposta 2 correcta">
+                                </div>
+                                <input type="text" id="resposta1" class="form-control" placeholder="Resposta 2" required>
+                            </div>
+                            <div class="input-group mb-2">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="radio" name="correcta" value="2" id="correcta2" aria-label="Resposta 3 correcta">
+                                </div>
+                                <input type="text" id="resposta2" class="form-control" placeholder="Resposta 3" required>
+                            </div>
+                            <div class="input-group mb-2">
+                                <div class="input-group-text">
+                                    <input class="form-check-input mt-0" type="radio" name="correcta" value="3" id="correcta3" aria-label="Resposta 4 correcta">
+                                </div>
+                                <input type="text" id="resposta3" class="form-control" placeholder="Resposta 4" required>
+                            </div>
+                        </fieldset>
+
+                        <div class="mb-3">
+                            <label for="inputImatge" class="form-label">Imatge</label>
+                            <input type="file" id="inputImatge" class="form-control" accept="image/*">
+                            <div id="textImatgeActual" class="form-text"></div>
+                        </div>
+
+                        <button type="submit" id="btnDesar" class="btn btn-primary">Crear pregunta</button>
+                        <button type="button" id="btnCancelar" class="btn btn-secondary d-none">Cancel·lar</button>
+                    </form>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="h5 mb-3">Preguntes existents</h2>
+                <div id="llista"></div>
+            </section>
+        </main>
+
+    </div>
+</body>
+</html>
