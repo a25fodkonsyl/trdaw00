@@ -1,0 +1,101 @@
+# Podem crear cadascuna de les imatges per a la nostra aplicació 
+# a partir del Dockerfile que té cada una de les carpetes
+# o bé amb compose aixecar-los tots de cop i que facin referencina
+# al codi que tenim just en aquest moment.
+
+# Recordeu que si creem les imatges, el codi no s'actualitza fins
+# que no tornem a crear la imatge. Els fitxers "Dockerfile" copien
+# a dins de la imatge el codi font corresponent. 
+# Per això, si volem que s'actualitzi
+# cada cop que engeguem el contenidor, hem de fer servir aquest compose
+# que monta el codi de la nostra aplicació com un volum per a cadascuna de les imatges
+
+services:
+
+  # Servidor node que aixeca un WebSocker al prt 8080
+  # el codi està a la carpeta "node" i s'executa amb "npm start"
+  # S'ha de fer un npm install per instal·lar les dependències
+  # Es pot accedir DINS del contenidor una vegada aixecat amb
+  # docker exec -it [nom_contenidor o ID] /bin/bash
+  # El Dockerfile és totalment autocontingut, però aquí depen de la carpeta node_modules
+  # que ja hi hagi
+  node:
+    image: node:20
+    volumes:
+      - ./node:/home/node/app
+    working_dir: /home/node/app
+    ports:
+      - 8080:8080
+      # Per una banda primer ho instal·lem tot amb npm ci que fa la instal·lació
+      # neta, i després executem npm start per aixecar el nodejs
+      # ATENCIO, al package.json l'script start l'hem canviat pq. cridi a
+      # nodemon enlloc de node. D'aquesta forma detecta els canvis ens els 
+      # fitxers i recarrega el nodejs
+      # Per instal·lar nodemon: npm install --save-dev nodemon 
+      # o directament al packages com a
+      #   "devDependencies": { "nodemon": "^3.0.3"}
+      #
+      #command: bash -c "npm ci && npm start"  #El primer cop que l'aixequem, per instal·lar-ho tot
+    command: bash -c "npm start"
+
+  # Servidor web NGINX per servir els fitxers estàtics pel port 80
+  # Serveix els fitxers de la carpeta "front" 
+  nginx:
+    image: nginx:1.25.3-alpine
+    volumes:
+      #Directori Root
+      - ./front:/usr/share/nginx/html
+      #Fitxer de configuració
+      - ./front/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80
+    depends_on:
+      - node
+
+  laravel:
+    #Tenim un dockerfile amb PHP i Composer i les utilitats de docker per php per aixecar un servidor Laravel
+    build: back
+    ports:
+      - 8001:8000
+    volumes:
+      - ./back_laravel:/var/www/
+    working_dir: /var/www/
+    #El primer cop que l'aixequem, per instal·lar-ho tot podriem fer
+    #command: bash -c "composer install && echo '1' && echo 'php artisan el que necessitis' && php artisan key:generate && echo '2' &&php artisan serve --host=0.0.0.0"
+    #la resta, quan ja tenim vendor, i key i migrate i seed... podriem fer directament
+    command: bash -c "php artisan serve --host=0.0.0.0"
+
+  # Aplicació per accedir via web a la nostra base de dades, al port 9090
+  adminer:
+    image: adminer:4.7.7
+    restart: always
+    ports:
+      - 9090:8080
+    depends_on:
+      - db
+
+  # Base de dades MySQL (db)
+  # anomeneu-la com vulgueu, però recordeu que ha de coincidir amb el nom
+  # que poseu a la configuració de la connexió de l'aplicació (i el depends_on de l'adminer)
+  # Crearà un named volume "mysql_data" on guardarà les dades de la base de dades
+  # Si esborreu el volume, la BBDD estarà buida i podreu començar des de 0 
+  # També crearà una BBBDD "persones" pq. la imatge de mysql executa els fitxers
+  # que hi hagi a la carpeta "docker-entrypoint-initdb.d" al primer inici
+  db:
+    image: mysql:8.2.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: persones
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    ports:
+      - 3306:3306
+    volumes:
+      # Per guardar les dades de forma persistent en un named volume
+      - mysql_data:/var/lib/mysql
+      # Per crear algunes taules al primer inici
+
+#Definim els named volums que fa servir l'aplicacio
+volumes:
+  mysql_data:
